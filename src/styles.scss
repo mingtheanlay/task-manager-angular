@@ -22,22 +22,24 @@ h3 {
   font-size: 2rem;
 }
 
-p {
-  font-size: 1.5rem;
-}
-
 button {
   font-size: 1.5rem;
 }
 
+p {
+  color: #9f9f9f;
+  margin-top: 5px;
+  font-size: 1.5rem;
+}
+
 .container {
-  min-width: 50vw;
   max-width: 60vw;
   margin: 30px auto;
   overflow: auto;
   min-height: 300px;
   background-color: #121e2a;
   padding: 30px;
+  border: none;
   border-radius: 10px;
 }
 .btn {
@@ -99,15 +101,15 @@ button {
   h1 {
     font-size: 3rem;
   }
-  
+
   h3 {
     font-size: 2rem;
   }
-  
+
   p {
     font-size: 1rem;
   }
-  
+
   .btn {
     display: inline;
     font-size: 1rem;

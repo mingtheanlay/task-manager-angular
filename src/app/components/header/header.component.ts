@@ -8,8 +8,15 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   title = "Task Manager";
+  date = new Date();
 
-  constructor() { }
+  constructor() {
+    
+  }
+
+  myFunction(){
+    this.date=new Date();
+   }
 
   ngOnInit(): void {
 

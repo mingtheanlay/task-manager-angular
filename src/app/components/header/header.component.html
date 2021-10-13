@@ -1,4 +1,11 @@
 <header>
-  <h1>{{title}}</h1>
+  <div>
+    <h1>{{title}}</h1>
+    <div class="date">
+      <span>{{date  | date:'MMM d'}}</span>
+      <span> at </span>
+      <span>{{date  | date:'h:mm a'}}</span>
+    </div>
+  </div>
   <app-button color="#0070c2" text="Add New Task" (btnClick)="toggledAddTask()"></app-button>
 </header>
