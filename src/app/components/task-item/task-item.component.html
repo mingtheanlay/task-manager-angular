@@ -1,4 +1,7 @@
 <div class="task">
-  <h3>{{task.text}}</h3>
+  <h3>
+    {{task.text}}
+    <fa-icon (click)="onDestroy(task)" [ngStyle]="{'color': '#0070c2'}" [icon] = "faCheckCircle"></fa-icon>
+  </h3>
   <p class="reminder">{{task.day}}</p>
 </div>

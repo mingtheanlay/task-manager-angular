@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
+// import task service from services folder
+import { TaskService } from 'src/app/services/task.service';
+
 // Fake JSON DB
 import { TaskInterface } from 'src/app/Task';
-import { TaskData } from 'src/app/mock-tasks';
 
 @Component({
   selector: 'app-tasks',
@@ -11,11 +13,21 @@ import { TaskData } from 'src/app/mock-tasks';
 })
 export class TasksComponent implements OnInit {
 
-  tasks: TaskInterface[] = TaskData;
+  tasks: TaskInterface[] = [];
 
-  constructor() { }
+  constructor(private taskService: TaskService) { }
 
   ngOnInit(): void {
+    this.taskService.getTasks().subscribe((tasks) => this.tasks = tasks);
   }
+
+  onDestroyTask(task: TaskInterface) {
+    this.taskService
+      .destroyTask(task)
+      .subscribe(() => (this.tasks = this.tasks.filter((t) => t.id !==task.id)));
+
+  }
+
+
 
 }
