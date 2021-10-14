@@ -14,13 +14,15 @@ export class TaskService {
   constructor(private httpClient: HttpClient) {
 
   }
-  
+
   getTasks(): Observable<TaskInterface[]> {
+    // GET API
     return this.httpClient.get<TaskInterface[]>(this.apiUrl);
   }
 
   destroyTask(task: TaskInterface): Observable<TaskInterface> {
     const url = `${this.apiUrl}/${task.id}`;
+    // DESTORY API
     return this.httpClient.delete<TaskInterface>(url);
   }
 }

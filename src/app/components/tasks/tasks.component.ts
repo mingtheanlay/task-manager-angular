@@ -24,7 +24,7 @@ export class TasksComponent implements OnInit {
   onDestroyTask(task: TaskInterface) {
     this.taskService
       .destroyTask(task)
-      .subscribe(() => (this.tasks = this.tasks.filter((t) => t.id !==task.id)));
+      .subscribe(() => (this.tasks = this.tasks.filter((t) => t.id !== task.id)));
 
   }
 
