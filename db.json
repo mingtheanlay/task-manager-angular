@@ -22,13 +22,19 @@
       "id": 4,
       "text": "Meeting at School",
       "day": "May 6th at 1: 30pm",
-      "reminder": true
+      "reminder": false
     },
     {
       "id": 5,
       "text": "Meeting at School",
       "day": "May 6th at 1: 30pm",
-      "reminder": true
+      "reminder": false
+    },
+    {
+      "id": 6,
+      "text": "Meeting at School",
+      "day": "May 6th at 1: 30pm",
+      "reminder": false
     }
   ]
 }

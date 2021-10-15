@@ -21,13 +21,16 @@ export class TasksComponent implements OnInit {
     this.taskService.getTasks().subscribe((tasks) => this.tasks = tasks);
   }
 
-  onDestroyTask(task: TaskInterface) {
+  destroyTask(task: TaskInterface) {
     this.taskService
       .destroyTask(task)
       .subscribe(() => (this.tasks = this.tasks.filter((t) => t.id !== task.id)));
 
   }
 
-
+  toggleReminder(task: TaskInterface) {
+    task.reminder = !task.reminder;
+    this.taskService.updateTaskReminder(task).subscribe();
+  }
 
 }
