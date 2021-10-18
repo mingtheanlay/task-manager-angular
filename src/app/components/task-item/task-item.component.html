@@ -3,11 +3,11 @@
     <h3 class="task-name">
       {{task.text}}
     </h3>
-    <p class="reminder">{{task.day}}</p>
+    <p class="reminder">{{task.date}}</p>
   </span>
   <span class="task-actions">
     <fa-icon (click)="onDestroy(task)" [ngStyle]="{'color': '#0070c2'}" [icon]="faCheckCircle"></fa-icon>
-    <fa-icon (click)="onToggle(task)" [ngStyle]="{'color': task.reminder===true?'grey':'#0070c2'}" [icon]="faBellOn">
+    <fa-icon (click)="onToggle(task)" [ngStyle]="{'color': task.reminder===true?'#0070c2':'grey'}" [icon]="faBellOn">
     </fa-icon>
   </span>
 

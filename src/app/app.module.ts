@@ -16,6 +16,8 @@ import { TaskItemComponent } from './components/task-item/task-item.component';
 
 // Font Awesome
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { AddTaskComponent } from './components/add-task/add-task.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,13 +25,15 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     HeaderComponent,
     ButtonComponent,
     TasksComponent,
-    TaskItemComponent
+    TaskItemComponent,
+    AddTaskComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
