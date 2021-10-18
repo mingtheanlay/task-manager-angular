@@ -1,4 +1,4 @@
-<form action="" class="add-form" (ngSubmit)="onSubmit()">
+<form  *ngIf="showAddTask" class="add-form" (ngSubmit)="onSubmit()">
     <div class="form-control">
         <label for="text">Task</label>
         <input type="text" name="text" id="text" placeholder="Add task" [(ngModel)]="text">
@@ -7,7 +7,7 @@
         <label for="day">Date & Time</label>
         <input type="date" name="date" id="date" placeholder="Add date & time" [(ngModel)]="date">
     </div>
-    <div class="form-control form-control-check">
+    <div class="form-control-check">
         <label for="reminder">Set reminder</label>
         <input type="checkbox" name="reminder" id="reminder" [(ngModel)]="reminder">
     </div>

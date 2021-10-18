@@ -33,6 +33,8 @@ p {
 }
 
 .container {
+  display: flex;
+  flex-direction: column;
   max-width: 60vw;
   margin: 30px auto;
   overflow: auto;
@@ -63,10 +65,11 @@ p {
 
 .btn-block {
   display: block;
-  width: 40%;
+  width: 60%;
   margin-left: auto;
   margin-right: auto;
   font-size: 1.5rem;
+  margin-top: 2rem;
 }
 
 .form-control {
@@ -96,15 +99,16 @@ p {
 
 .form-control-check {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  margin: 5px auto;
+  font-size: 1.5rem;
+  width: 70%;
+  padding: 10px 0;
+  align-items: center;
 }
 
-.form-control-check label {
-  flex: 1;
-}
-
-.form-control-check input {
-  flex: 2;
-  height: 20px;
+@media only screen and (max-width: 646px) {
+ html {
+   font-size: 0.5rem;
+ }
 }

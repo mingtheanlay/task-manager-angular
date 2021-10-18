@@ -1,22 +1,16 @@
 {
   "tasks": [
     {
-      "text": "Finalize the project",
-      "date": "2021-10-22",
-      "reminder": false,
+      "text": "Hello World",
+      "date": "2021-10-19",
+      "reminder": true,
       "id": 1
     },
     {
-      "text": "Test",
-      "date": "2021-10-23",
-      "reminder": false,
+      "text": "This is a test",
+      "date": "2021-10-22",
+      "reminder": true,
       "id": 2
-    },
-    {
-      "text": "Hello",
-      "date": "2021-11-06",
-      "reminder": false,
-      "id": 3
     }
   ]
 }

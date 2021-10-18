@@ -1,11 +1,9 @@
 <header>
-  <div>
+  <div class="title">
     <h1>{{title}}</h1>
     <div class="date">
-      <span>{{date  | date:'MMM d'}}</span>
-      <span> at </span>
-      <span>{{date  | date:'h:mm a'}}</span>
+      <span>{{date  | date:'YYYY-MM-d'}}</span>
     </div>
   </div>
-  <app-button color="#0070c2" text="Add New Task" (btnClick)="toggledAddTask()"></app-button>
+  <app-button *ngIf="hasRoute('/')" color="{{showAddTask ? '#d72f0f' : '#0070c2'}}" text="{{showAddTask ? 'Close' : 'Add'}}" (btnClick)="toggledAddTask()"></app-button>
 </header>
